@@ -1,4 +1,5 @@
-res = document.querySelector('#res')
+var res = document.querySelector('#res')
+res.maxlength = '2'
 
 function zero() {
     res.textContent += '0'
@@ -147,10 +148,88 @@ function M() {
     res.textContent += 'm'
 }
 
+function acento() {
+    res.textContent += '´'
+}
+
+function abrirChave() {
+    res.textContent += '{' 
+}
+
+function fecharChave() {
+    res.textContent += '}'
+}
+
+function abrirColchete() {
+    res.textContent += '['
+}
+
+function fecharColchete() {
+    res.textContent += ']'
+}
+
+function underline() {
+    res.textContent += '_'
+}
+
+function menos() {
+    res.textContent += '-'
+}
+
+function mais() {
+    res.textContent += '+'
+}
+
+function igual() {
+    res.textContent += '='
+}
+
+function interrogação() {
+    res.textContent += '?'
+}
+
+function barra() {
+    res.textContent += '|'
+}
+
+function barraR() {
+    res.textContent += '/'
+}
+
+function tio() {
+    res.textContent += '^'
+}
+
+function doisPontos() {
+    res.textContent += ':'
+}
+
+function maior() {
+    res.textContent += '<'
+}
+
+function menor() {
+    res.textContent += '>'
+}
+
+function aspas() {
+    res.textContent += `${''}`
+}
+
 function espaço() {
     res.textContent += ' '
 }
 
+function deletar(){
+    res.textContent = ''
+}
+
 function backspace() {
-    
+    var res = document.getElementById('res').innerHTML
+    document.getElementById('res').innerHTML = res.substring(0, res.length - 1)
+}
+
+function enter(){
+    var res = document.getElementById('res').innerHTML
+    alert(res)
 }
