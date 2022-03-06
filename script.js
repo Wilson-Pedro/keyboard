@@ -219,10 +219,6 @@ function espaço() {
     res.textContent += ' '
 }
 
-function deletar(){
-    res.textContent = ''
-}
-
 function backspace() {
     var res = document.getElementById('res').innerHTML
     document.getElementById('res').innerHTML = res.substring(0, res.length - 1)
