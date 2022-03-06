@@ -1,5 +1,4 @@
 var res = document.querySelector('#res')
-res.maxlength = '2'
 
 function zero() {
     res.textContent += '0'
@@ -34,7 +33,7 @@ function seven() {
 }
 
 function eight() {
-    res.textContent  += '8'
+    res.textContent += '8'
 }
 
 function nine(){
@@ -213,7 +212,7 @@ function menor() {
 }
 
 function aspas() {
-    res.textContent += `${''}`
+    res.textContent += '"'
 }
 
 function espaço() {

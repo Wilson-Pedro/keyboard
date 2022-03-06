@@ -10,10 +10,10 @@
 <body>
     <main>
         <div id="container">
-            <section id="res">
+            <div id="res">
                     
-            </section>
-            <div>
+            </div>
+            <div id="teclado">
                 <table>
                     <tr id="top">
                         <td class="top">Esc</td>
@@ -35,7 +35,7 @@
                         <td onclick="deletar()" class="top">Delete</td>
                     </tr>
                     <tr>
-                        <td>"</td>
+                        <td onclick="aspas()">"</td>
                         <td onclick="one()">1</td>
                         <td onclick="two()">2</td>
                         <td onclick="three()">3</td>
@@ -71,7 +71,7 @@
                         <td onclick="fecharColchete()">]</td>
                     </tr>
                     <tr>
-                        <td onclick="CapsLk()" class="left" colspan="3">CapsLk</td>
+                        <td onclick="capslk()" class="left" colspan="3">CapsLk</td>
                         <td onclick="A()">A</td>
                         <td onclick="S()">S</td>
                         <td onclick="D()">D</td>
@@ -118,6 +118,9 @@
             </div>
         </div>
     </main>
+    <footer>
+        <p>Feito por: WPCN</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
