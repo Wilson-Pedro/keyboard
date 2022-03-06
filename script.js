@@ -1,7 +1,49 @@
 var res = document.querySelector('#res')
 
+
+
+const capsButton = document.querySelector("#capslk");
+let capsOn = false;
+
+
+//SWITCH do capslk 
+capsButton.addEventListener("click", ()=>{
+
+    
+    capsOn = !capsOn;
+
+
+})
+
+
+
+
+//função que escreve e transforma em maíuscula se ncessário
+const writeLetter = (letter)=>{
+
+
+    if(!capsOn)
+    {
+        
+    res.textContent += letter;
+    }
+    else{
+        if(typeof letter === "string")
+        {
+            
+            res.textContent += letter.toUpperCase();
+            
+        }
+        else{
+            res.textContent += letter;
+        }
+    }
+
+}
+
+
 function zero() {
-    res.textContent += '0'
+    res.textContent += `0`
 }
 
 function one() {
@@ -41,110 +83,110 @@ function nine(){
 }
 
 function Q() {
-    res.textContent += 'q'
+    writeLetter("q");
 }
 
 function W() {
-    res.textContent += 'w'
+    writeLetter("w");
 }
 
 function E() {
-    res.textContent += 'e'
+    writeLetter("e");
 }
 
 function R() {
-    res.textContent += 'r'
+    writeLetter("r");
 }
 
 function T() {
-    res.textContent += 't'
+    writeLetter("t");
 }
 
 function Y() {
-    res.textContent += 'y'
+    writeLetter("y");
 }
 
 function U() {
-    res.textContent += 'u'
+    writeLetter("u");
 }
 
 function I() {
-    res.textContent += 'i'
+    writeLetter("i");
 }
 
 function O() {
-    res.textContent += 'o'
+    writeLetter("o");
 }
 
 function P() {
-    res.textContent += 'p'
+    writeLetter("p");
 }
 
 function A() {
-    res.textContent += 'a'
+    writeLetter("a");
 }
 
 function S() {
-    res.textContent += 's'
+    writeLetter("s");
 }
 
 function D() {
-    res.textContent += 'd'
+    writeLetter("d");
 }
 
 function F() {
-    res.textContent += 'f'
+    writeLetter("f");
 }
 function G() {
-    res.textContent += 'f'
+    writeLetter("g");
 }
 
 function H() {
-    res.textContent += 'h'
+    writeLetter("h");
 }
 
 function J() {
-    res.textContent += 'j'
+    writeLetter("j");
 }
 
 function K() {
-    res.textContent += 'k'
+    writeLetter("k");
 }
 
 function L() {
-    res.textContent += 'l'
+    writeLetter("l");
 }
 
 function Ç() {
-    res.textContent += 'ç'
+    writeLetter("ç");
 }
 
 function Z() {
-    res.textContent += 'z'
+    writeLetter("z");
 }
 
 function X() {
-    res.textContent += 'x'
+    writeLetter("x");
 }
 
 function C() {
-    res.textContent += 'c'
+    writeLetter("c");
 }
 
 function V() {
-    res.textContent += 'v'
+    writeLetter("v");
 }
 
 function B() {
-    res.textContent += 'b'
+    writeLetter("b");
 }
 
 function N() {
-    res.textContent += 'n'
+    writeLetter("n");
 }
 
 function M() {
-    res.textContent += 'm'
+    writeLetter("n");
 }
 
 function acento() {
