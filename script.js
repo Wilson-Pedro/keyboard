@@ -96,7 +96,7 @@ function F() {
     res.textContent += 'f'
 }
 function G() {
-    res.textContent += 'f'
+    res.textContent += 'g'
 }
 
 function H() {
