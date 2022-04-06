@@ -228,3 +228,59 @@ function enter(){
     var res = document.getElementById('res').innerHTML
     alert(res)
 }
+
+
+const letters = ["A", "S", "Q"];d
+
+// Capturando o evento de clique de qualquer elemento do documento
+document.addEventListener("click", (e) => {
+    // função para capturar o estado do botão capslock (on ou off)
+    const capsLockState = getCapsLockState();
+
+    const foundIndex = [];
+
+    let idx = letters.indexOf(e.target.textContent);
+
+    // Filtrando o index de qual elemento foi clicado
+    while (idx != -1) {
+        foundIndex.push(idx);
+        idx = letters.indexOf(e.target.textContent, idx + 1);
+    }
+
+    if (foundIndex.length > 0) {
+        // De acordo com o estado do botão capsLock
+        if (capsLockState === "off") {
+            //  transformamos a letra para minúscula
+            res.textContent += letters[foundIndex].toLowerCase();
+            
+        } else {
+            //  transformamos a letra para maiúscula
+            res.textContent += letters[foundIndex]?.toUpperCase();
+        }
+    }
+});
+
+// Função que pega o estado atual do icon sinalizador e retorna se está (on ou off)
+function getCapsLockState() {
+    const capsLockStateIcon = document.querySelector(".caps-lock-state-icon");
+    const capsLockState = capsLockStateIcon.classList.item(1);
+    return capsLockState;
+}
+
+/**
+ * Ao clicar no botão capsLock no teclado esta função adiciona a classe (on ou off) na classe (.caps-lock-state-icon),
+ * e de acordo com o estado atual ele faz a inversão, se estiver on fica off e vice versa.
+ */
+
+
+
+function capslk() {
+    const capsLockState = document.querySelector(".caps-lock-state-icon");
+    if (capsLockState.classList.contains("off")) {
+        capsLockState.classList.remove("off");
+        capsLockState.classList.add("on");
+    } else {
+        capsLockState.classList.remove("on");
+        capsLockState.classList.add("off");
+    }
+}
